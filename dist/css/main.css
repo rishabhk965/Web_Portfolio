@@ -4,13 +4,13 @@
   right: 35px;
   top: 35px;
   cursor: pointer;
-  transition: all 0.5s ease-out; }
+  transition: all 0.4s ease-out; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background: #fff;
-    transition: all 0.5s ease-out; }
+    transition: all 0.4s ease-out; }
   .menu-btn.close {
     transform: rotate(90deg); }
     .menu-btn.close .btn-line:nth-child(1) {
@@ -44,14 +44,14 @@
     padding: 0;
     background: #373737;
     list-style: none;
-    transform: translate3d(0, 100%, 0);
-    transition: all 0.5s ease-out; }
+    transform: translate3d(100%, 0, 0);
+    transition: all 0.4s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
     background: #444;
-    transition: all 0.5s ease-out;
-    transform: translate3d(0, -100%, 0); }
+    transition: all 0.4s ease-out;
+    transform: translate3d(-100%, 0, 0); }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
@@ -63,7 +63,7 @@
       border: solid 2px #cc0000; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
-    transition: all 0.5s ease-out; }
+    transition: all 0.4s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
@@ -77,7 +77,7 @@
     font-weight: 300;
     color: #fff;
     text-decoration: none;
-    transition: all 0.5s ease-out; }
+    transition: all 0.4s ease-out; }
     .menu .nav-link:hover {
       color: #cc0000; }
 
@@ -111,7 +111,43 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.9); }
+      background: rgba(68, 68, 68, 0.8); }
+  body#code-img {
+    background: url(../img/code.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#code-img .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(68, 68, 68, 0.7); }
+  body#about-img {
+    background: url(../img/about.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#about-img .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(68, 68, 68, 0.7); }
+  body#projects-img {
+    background: url(../img/projects.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#projects-img .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(68, 68, 68, 0.7); }
 
 h1, h2, h3 {
   margin: 0;
@@ -120,6 +156,9 @@ h1, h2, h3 {
     font-size: 6rem;
     padding: -1rem;
     margin-top: -3rem; }
+  h1.lg-heading1, h2.lg-heading1, h3.lg-heading1 {
+    font-size: 6rem;
+    padding: -1rem; }
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
@@ -137,6 +176,9 @@ header {
 .text-name {
   color: #cc0000; }
 
+.text-code {
+  color: #fff; }
+
 .sm-name {
   color: #cc0000; }
 
@@ -152,7 +194,7 @@ main {
       padding: 0.4rem; }
       main .icons a:hover {
         color: #cc0000;
-        transition: all 0.5s ease-out; }
+        transition: all 0.4s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -163,6 +205,56 @@ main {
       display: grid;
       grid-gap: 30px;
       grid-template-areas: 'bioimage bio bio'; }
+  main#coding {
+    overflow: hidden; }
+    main#coding .boxes {
+      display: grid;
+      grid-gap: 30px;
+      grid-template-areas: 'box-1 box-2' 'box-3 box-4' 'box-5';
+      grid-auto-rows: 3rem;
+      grid-template-columns: repeat(2, 1fr);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 3rem; }
+      main#coding .boxes div {
+        font-size: 1rem;
+        border: 3px #fff solid;
+        padding: 1rem 2rem;
+        margin-bottom: 2rem;
+        transition: all 0.4s ease-out; }
+        main#coding .boxes div:hover {
+          padding: 0.5rem 1.5rem;
+          background: #cc0000;
+          color: #fff; }
+          main#coding .boxes div:hover span {
+            color: #fff; }
+  main .box-1 {
+    grid-area: box-1;
+    font-size: 1rem;
+    background: #515151;
+    padding: 0.5rem; }
+  main .box-2 {
+    grid-area: box-2;
+    font-size: 1rem;
+    background: #515151;
+    padding: 0.5rem; }
+  main .box-3 {
+    grid-area: box-3;
+    font-size: 1rem;
+    background: #515151;
+    padding: 0.5rem; }
+  main .box-4 {
+    grid-area: box-4;
+    font-size: 1rem;
+    background: #515151;
+    padding: 0.5rem; }
+  main .box-5 {
+    grid-area: box-5;
+    font-size: 1rem;
+    background: #515151;
+    padding: 0.5rem; }
 
 .bio-image {
   grid-area: bioimage;
@@ -180,12 +272,82 @@ main {
   padding: 0.5rem;
   border-bottom: #cc0000 3px solid; }
 
+.boxes0 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes0 div {
+    font-size: 1rem;
+    border: 2px #fff solid;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.4s ease-out; }
+
 #main-footer {
   text-align: center;
-  padding: 1rem;
-  background: #2b2b2b;
+  padding: 0.3rem;
+  background: #202020;
   color: #fff;
-  height: 60px; }
+  height: 30px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center; }
+
+.project-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'project1 project2 project3';
+  grid-template-columns: repeat(3, 1fr); }
+  .project-info .project-1 {
+    grid-area: project1; }
+  .project-info .project-2 {
+    grid-area: project2; }
+  .project-info .project-3 {
+    grid-area: project3; }
+  .project-info .project {
+    background: #515151;
+    padding: 0.5rem;
+    border-bottom: #cc0000 3px solid; }
+
+.ab1 {
+  font-style: bold;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 1rem; }
+
+.ab2 {
+  font-style: initial;
+  font-family: 'Courier New', Courier, monospace;
+  background: #474747;
+  padding: 1rem; }
+
+.ac1 {
+  font-style: bold;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background: #474747;
+  padding: 1rem; }
+
+.ac2 {
+  font-style: initial;
+  font-family: 'Courier New', Courier, monospace;
+  background: #474747; }
+
+.date {
+  font-style: oblique;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: #474747; }
+
+.branch {
+  font-style: italic;
+  margin-left: 30px; }
+
+.time {
+  color: #e0547e; }
 
 @media screen and (max-width: 768px) {
   main {
@@ -216,6 +378,9 @@ main {
       height: 150px; }
   .about-info {
     grid-template-areas: 'bioimage' 'bio';
+    grid-template-columns: 1fr; }
+  .project-info {
+    grid-template-areas: 'project1' 'project2' 'project3';
     grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {

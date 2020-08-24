@@ -2,9 +2,10 @@ $primary-color: #444;
 $secondary-color: #cc0000;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
-$background-opacity: 0.9;
+$background-opacity: 0.8;
+$z-index: 1030;
 @mixin easeOut {
-    transition: all 0.5s ease-out;
+    transition: all 0.4s ease-out;
 }
 
 @mixin background {
@@ -21,6 +22,48 @@ $background-opacity: 0.9;
                 height: 100%;
                 z-index: -1;
                 background: rgba($primary-color, $background-opacity);
+            }
+        }
+        &#code-img{
+            background: url(../img/code.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            .overlay {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: rgba($primary-color, 0.7);
+            }
+        }
+        &#about-img{
+            background: url(../img/about.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            .overlay {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: rgba($primary-color, 0.7);
+            }
+        }
+        &#projects-img{
+            background: url(../img/projects.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            .overlay {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: rgba($primary-color, 0.7);
             }
         }
     }

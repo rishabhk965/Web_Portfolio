@@ -46,6 +46,13 @@
         'bio';
         grid-template-columns: 1fr;
     }
+    .project-info{
+        grid-template-areas: 
+        'project1'
+        'project2'
+        'project3';
+        grid-template-columns: 1fr;
+    }
 }
 @include mediaSm{
     main#home h1{
